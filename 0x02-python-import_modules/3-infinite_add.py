@@ -1,11 +1,20 @@
 #!/usr/bin/python3
 
-if __name__ == "__main__":
-    """Print all the addition agruments."""
-    import sys
+import sys
 
-    total = 0
-    for i in range(len(sys.argv) - 1):
-        total += int(sys.argv[i + 1])
-    print("{}".format(total))
+def add_arguments(arguments):
+    result = 0
+    for arg in arguments:
+        result += int(arg)
+    return result
+
+if __name__ == "__main__":
+    # Get all command-line arguments except the script name (sys.argv[0])
+    arguments = sys.argv[1:]
+
+    # Call the function to add the arguments
+    result = add_arguments(arguments)
+
+    # Print the result followed by a new line
+    print(result)
 
