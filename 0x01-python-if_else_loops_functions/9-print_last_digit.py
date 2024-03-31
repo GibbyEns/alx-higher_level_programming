@@ -1,18 +1,8 @@
-
-i!/usst_digit(number):
-        if number < 0:
-                    last_digit = number % -(10)
-                            print(-(last_digit), end='')
-                                else:
-                                            last_digit = number % 10
-                                                    print(last_digit, end='')
-                                                        return abs(last_digit)
-                                                    r/bin/python3
+#!/usr/bin/python3
 def print_last_digit(number):
     if number < 0:
-        last_digit = number % -(10)
-        print(-(last_digit), end='')
-    else:
-        last_digit = number % 10
-        print(last_digit, end='')
-    return abs(last_digit)
+        lasy_num =(-number % 10)
+    elif number >= 0:
+        last_num = number % 10
+    print("{:d}".format(last_num), end="")
+    return last_num
